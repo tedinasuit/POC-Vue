@@ -2,12 +2,17 @@ var app = new Vue({
     el: '#app',
     data() {
         return {
-            username: ''    
+            page: 0 
         }
     },
     methods: {
-        submit(){
-            console.log(this.username)
+        nextPage(){
+        this.page += 1;
+
+        if (this.page >= 3)
+        {
+            this.page = 0;
+        }
         }
     }
 

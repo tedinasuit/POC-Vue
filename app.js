@@ -2,18 +2,17 @@ var app = new Vue({
     el: '#app',
     data() {
         return {
-            page: 0 
-        }
+            vehicles: []
+        };
     },
     methods: {
-        nextPage(){
-        this.page += 1;
+        selectVehicle(value) {
+            console.log(`You have selected vehicle: ${value}`); 
+        }
+    },
 
-        if (this.page >= 3)
-        {
-            this.page = 0;
-        }
-        }
+    mounted() {
+        this.vehicles = ['vehicle1', 'vehicle2', 'vehicle3', 'vehicle4'];
     }
 
-})
+});

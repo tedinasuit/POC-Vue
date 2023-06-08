@@ -4,17 +4,11 @@
 </head>
 <body>
     <div id="app">
-        <div v-if="page === 0">
-            page 0
-        </div>
-        <div v-if="page === 1">
-            page 1
-        </div>
-        <div v-if="page === 2">
-            page 2
-        </div>
-        <button @click="nextPage">Go to next page</button>
+        <button @click="selectVehicle(vehicle)" class="vehicle" v-for="(vehicle, index) in vehicles" :key="index">
+            {{ vehicle }}
+        </button>
     </div>
-    <script src="https://cdn.jsdelivr.net/vue/1.0.28/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
     <script src="app.js"></script>
 </body>
+</html>

@@ -4,8 +4,11 @@
 </head>
 <body>
     <div id="app">
-        {{ value }}
-        <button @click= "increment">Click Me!</button>
+        {{ username }}
+        <br/>
+        <button @click="submit">Submit</button>
+
+        <input type="text" v-model="username" />
     </div>
     <script src="https://cdn.jsdelivr.net/vue/1.0.28/vue.min.js"></script>
     <script src="app.js"></script>
